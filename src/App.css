@@ -1,0 +1,32 @@
+#root {
+	text-align: center;
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.counter {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-left: 30px;
+}
+
+.countdown-timer {
+	display: flex;
+	justify-content: center;
+}
+
+.dark {
+	background-color: black;
+	color: white;
+}
+
+.light {
+	background-color: white;
+	color: black;
+}
