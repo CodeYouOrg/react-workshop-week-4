@@ -1,6 +1,24 @@
+import { useEffect, useState } from 'react';
 import Counter from './Counter';
 
-function CountdownTimer({ now, launchDate }) {
+function CountdownTimer() {
+	const [now, setNow] = useState(new Date());
+	const [launchDate] = useState(new Date('January 1, 2025 00:00:00'));
+
+	function convertTimeZone(date, timeZone) {
+		return new Date(new Date(date).toLocaleString('en-US', { timeZone }));
+	}
+
+	useEffect(() => {
+		const initializer = setInterval(() => {
+			//todo: convert timezone
+			setNow(new Date());
+		}, 1000);
+		return () => {
+			clearInterval(initializer);
+		};
+	}, []);
+
 	const diff = launchDate.getTime() - now.getTime();
 
 	const remaining = diff < 0 ? 0 : diff;

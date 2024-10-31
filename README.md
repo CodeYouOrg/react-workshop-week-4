@@ -1,6 +1,7 @@
 # React workshop week 4
 
 welcome back! this week, we're going to be looking at state management and hooks in React.
+We will fix a few bugs, add some features, and explore side effects
 
 ## getting started
 
